@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bài 4</title>
+</head>
+<body>
+	<script type="text/javascript">
+        var N = prompt("Nhập khoảng N: ");
+        var M = prompt("Nhập khoảng M: ");
+        var K = prompt("Nhập số K: ");
+        var tong = 0;
+        if (M >= N) {
+            for (var i = N; i <= M; i++) {
+                if (i % K == 0) {
+                    tong += i;
+                }
+            }
+            document.write("Ket qua la:" + tong);
+        }
+	</script>
+	
+</body>
+</html>

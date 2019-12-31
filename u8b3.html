@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bài 3</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var n;
+        var sum = 0;
+        var giaiThua = 1;
+        var n = prompt('Mời bạn nhập');
+        do {
+            if (n <= 0) {
+                document.write("Bạn phải nhập vào số nguyên dương!");
+            }
+        } while (n <= 0);
+        for (var i = 1; i <= n; i++) {
+            giaiThua *= i;
+            sum += (i / giaiThua);
+        }
+        document.write("Tổng = " + sum);
+	</script>
+	
+</body>
+</html>

@@ -11,6 +11,17 @@
 	background-image: url(image/banner/banner.jpg);
 	background-size: 100% 750px;
 }
+/*.mobile{
+	width: 	100%;
+	height: 	50px;
+	clear: 	both;	
+}*/
+/*.mobile{
+	float: 	left;	
+}*/
+.mobile>p>h2>span{
+	float: right;
+}
 section{
 	width: 100%;
 	height: 100%;
@@ -578,7 +589,7 @@ section{
 		width: 80%;
 	}
 }
-@media screen and (min-width: 501px) and (max-width: 750px){
+@media screen and (min-width: 501px) and (max-width: 800px){
 	.content1 {
 		width: 80%;
 		height: 700px;
@@ -695,8 +706,7 @@ section{
 		text-align: center;
 	}
 	.bar{
-		width: 100%;
-		height: 50px;
+		display: none;
 	}
 	.pt{
 		width: 100%;
