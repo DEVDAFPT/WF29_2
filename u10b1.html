@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bài 1</title>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: grey;
+		}
+		.picture{
+			width: 800px;
+			margin: 0 auto;
+			overflow: hidden;
+			margin-top: 100px;
+			border-radius: 10px;
+			position: relative;
+		}
+		.picture:hover .move{
+			display: block;
+		}
+		.move-picture{
+			width: 10000px;
+			transition: all 0.9s;
+		}
+		.move{
+			color: black;
+			position: absolute;
+			font-size: 40px;
+			top: 45%;
+			padding-left: 50px;
+			display: none;
+		}
+		.move i:last-child{
+			position: relative;
+			left: 620px;
+		}
+		img{
+			width: 800px;
+			height: 400px;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div class="picture">
+		<div class="move-picture">
+			<img src="image/portfolio/portfolio1.jpg" alt="">
+			<img src="image/blog/30.jpeg">
+			<img src="image/blog/40.jpeg" alt="">
+			<img src="image/blog/50.jpeg" alt="">
+			<img src="image/portfolio/portfolio3.jpeg" alt="">
+			<img src="image/portfolio/portfolio4.jpeg" alt="">
+			<img src="image/portfolio/portfolio5.jpeg" alt="">
+		</div>
+		<div class="move">
+			<i class="fa fa-chevron-circle-left" aria-hidden="true" onclick="Back()"></i>
+			<i class="fa fa-chevron-circle-right" aria-hidden="true" onclick="Next()"></i>
+		</div>
+	</div>
+	<script>
+		var KichThuoc = document.getElementsByClassName("picture")[0].clientWidth;
+		var move = 0;
+		var movepicture = document.getElementsByClassName("move-picture")[0];
+		var Img = movepicture.getElementsByTagName("img");
+		var Max = KichThuoc* Img.length;
+		Max -= KichThuoc;
+		function Next(){
+			if (move<Max) move += KichThuoc;
+			else move = 0;
+			movepicture.style.marginLeft = '-' + move + 'px';
+		}
+		function Back(){
+			if(move == 0) move = Max;
+			else move -= KichThuoc;
+			movepicture.style.marginLeft = '-' + move + 'px';
+		}
+		setInterval(function(){
+			Next();
+		}, 7000);
+	</script>
+</body>
+</html> 
