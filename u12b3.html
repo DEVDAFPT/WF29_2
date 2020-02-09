@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <script type="text/javascript" src="Js/jquery-3.4.1.min.js"></script>
+	<link rel="stylesheet" href="cssbai3.css">;
+</head>
+<body>
+	<ul id="nav">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Profile</a></li>
+    <li><a href="#">Services</a>
+        <ul class="child">
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Logo and Print Design</a></li>
+            <li><a href="#">Batagor Enak Neh</a>
+                 
+                <ul class="childchild">
+                <li><a href="#">Web Design</a></li>
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">Logo and Print Design</a></li>
+                <li><a href="#">Batagor Enak Neh</a></li>
+                <li><a href="#">Ngerujak juga</a></li>
+                </ul>
+             
+            </li>
+            <li><a href="#">Ngerujak juga</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Portofolio</a></li>
+    <li><a href="#">Pengen ke Arab</a></li>
+    <li><a href="#">Beasiswa S2 Go!! Goo!!</a>
+        <ul>
+            <li><a href="#">Lokal</a></li>
+            <li><a href="#">International</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Hire me</a></li>
+</ul>
+<script>
+$('#nav li').has('ul').hover(function() {
+   $(this).addClass('current').children('ul').addClass('shadow').slideDown(200)
+   },
+   function() {
+      $(this).removeClass('current').children('ul').stop(true, true).slideUp('200')
+  }
+)
+</script>
+</body>
+</html>

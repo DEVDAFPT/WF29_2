@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lightbox</title>
+    <script type="text/javascript" src="Js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="cssbai2.css">
+</head>
+
+<body>
+    <div class="picture">
+        <h4 style="font-size: 30px; text-align: center; color:#4E62FB;">Album bé gái dễ thương</h4>
+        <img class="img" src="image/blog/40.jpeg" alt="Ảnh đẹp">
+        <img class="img" src="image/portfolio/portfolio5.jpeg" alt="Ảnh đẹp">
+        <img class="img" src="image/portfolio/portfolio4.jpeg" alt="Ảnh đẹp">
+        <img class="img" src="image/portfolio/portfolio3.jpeg" alt="Ảnh đẹp">
+        <img class="img" src="image/portfolio/portfolio1.jpg" alt="Ảnh đẹp">
+    </div>
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img src="" class="modal-content">
+        <div class="caption"></div>
+    </div>
+    <script type="text/javascript">
+         $(function(){
+
+        var modal = $('#myModal');
+        var img = $('.img');
+        var modalImg = $(".modal-content");
+        var captionText = $(".caption");
+        
+        $('.img').click(function(){
+            var pic = $(this).attr('src');
+            $('#myModal').css({'display':'block'});
+            modalImg.attr('src',pic);
+            captionText.html(this.alt); 
+        }) ;
+
+        $(".close").click(function(){
+            $('#myModal').css({'display':'none'});
+        });
+
+    });
+    </script>
+</body>
+
+</html>
